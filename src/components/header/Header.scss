@@ -1,0 +1,35 @@
+.header {
+    padding: 2rem 0 4rem 0;
+    line-height: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    .sign {
+        margin: 0 10px;
+    }
+
+    .title-container {
+        display: flex;
+
+        .title {
+            margin-right: 1rem;
+            font-size: 64px;
+            font-style: italic;
+            font-weight: 100;
+            text-decoration: none;
+        }
+
+
+    }
+
+    @media (max-width: 1250px) {
+        .title-container {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

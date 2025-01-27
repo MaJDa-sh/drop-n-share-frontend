@@ -1,0 +1,23 @@
+.button {
+    padding: .5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: .2rem;
+    min-width: 6rem;
+    cursor: pointer;
+
+    &.primary {
+        color: white;
+        background: #6247AA;
+        border: 2px solid #6247AA;
+    }
+
+    &.secondary {
+        color: #232528;
+        background: white;
+        border: 2px solid #6247AA;
+        -webkit-box-shadow: 4px 4px 0px 0px rgba(98, 71, 170, 1);
+        -moz-box-shadow: 4px 4px 0px 0px rgba(98, 71, 170, 1);
+        box-shadow: 4px 4px 0px 0px rgba(98, 71, 170, 1);
+    }
+}
