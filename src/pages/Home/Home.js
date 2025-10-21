@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import useWebSocket, { ReadyState } from 'react-use-websocket';
 import "./Home.scss"
 import Modal from '../../components/modal/Modal';
