@@ -10,10 +10,10 @@ const Home = () => {
   const [selectedUser, setSelectedUser] = useState(null);
   const [roomId, setRoomId] = useState(null);
   const [receivedFiles, setReceivedFiles] = useState([])
+  console.log(process.env)
+  const { lastMessage: lastMessageUsers, readyState: readyStateUsers } = useWebSocket(`${process.env.REACT_APP_WS_URL}/users`);
 
-  const { lastMessage: lastMessageUsers, readyState: readyStateUsers } = useWebSocket(`${process.env.WS_URL}/users`);
-
-  const { lastMessage: lastMessageRoom, readyState: readyStateRoom } = useWebSocket(roomId ? `${process.env.WS_URL}/room/${roomId}` : null);
+  const { lastMessage: lastMessageRoom, readyState: readyStateRoom } = useWebSocket(roomId ? `${process.env.REACT_APP_WS_URL}/room/${roomId}` : null);
 
   const handleFileChange = (e) => {
     const selectedFile = e.target.files[0];
@@ -59,7 +59,7 @@ const Home = () => {
           sender: currentUser.id
         };
 
-        const recipientRoomUrl = `${process.env.WS_URL}/room/${userId}`;
+        const recipientRoomUrl = `${process.env.REACT_APP_WS_URL}/room/${userId}`;
 
         const recipientSocket = new WebSocket(recipientRoomUrl);
 
